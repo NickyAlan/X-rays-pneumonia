@@ -1,0 +1,13 @@
+filepath,predictions,probability
+predicts_custom\IM-0001-0001.jpeg,NORMAL,98.75
+predicts_custom\IM-0003-0001.jpeg,PNEUMONIA,51.51
+predicts_custom\IM-0005-0001.jpeg,NORMAL,87.48
+predicts_custom\IM-0006-0001.jpeg,PNEUMONIA,53.67
+predicts_custom\IM-0007-0001.jpeg,NORMAL,90.79
+predicts_custom\IM-0009-0001.jpeg,NORMAL,83.50
+predicts_custom\IM-0010-0001.jpeg,NORMAL,99.53
+predicts_custom\IM-0011-0001-0001.jpeg,NORMAL,69.46
+predicts_custom\IM-0011-0001.jpeg,NORMAL,72.75
+predicts_custom\person1_virus_6.jpeg,PNEUMONIA,100.00
+predicts_custom\person1_virus_7.jpeg,PNEUMONIA,99.99
+predicts_custom\person1_virus_8.jpeg,PNEUMONIA,100.00

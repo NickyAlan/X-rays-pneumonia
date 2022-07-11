@@ -1,7 +1,9 @@
+import imp
 from tensorflow import keras
 import tensorflow as tf
 import pandas as pd
 import numpy as np
+from datetime import date
 import sys
 import os
 
@@ -36,12 +38,16 @@ if __name__ == '__main__' :
     proba_1 = model.predict(predict_data).reshape(-1,)
     pred_class = np.array([1 if prob > 0.4416384 else 0 for prob in proba_1]).reshape(-1,)
     
+    predictions = []
+    probas = []
     for i in range(len(pred_class)) :
-        print(images_filepath[i])
-        print(class_names[pred_class[i]])
-        proba = proba_1[i] if pred_class[i] == 1 else np.abs(1-proba_1[i])
-        print(proba)
-        print('--\n')
+        predictions.append(class_names[pred_class[i]])
+        proba = proba_1[i]*100 if pred_class[i] == 1 else np.abs(1-proba_1[i])*100
+        probas.append(f'{proba:.2f}')
 
+    dataframe = pd.DataFrame({'filepath' : images_filepath, 'predictions': predictions, 'probability' : probas} )
+    time_ = date.today().strftime("%b-%d-%Y")
+    dataframe.to_csv(f'save_dataframe/X_rays_predictions_{time_}.csv', index=False)
+    print(f' -- save predictions to... save_dataframe/X_rays_predictions_{time_}.csv')
 
     
