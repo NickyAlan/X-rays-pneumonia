@@ -20,11 +20,12 @@
 ![](./images/3_Trim.gif)
 
 ## Under the Hood
-X-rays image classifications from [Kaggle dataset](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
+X-rays image classifications from : [Kaggle dataset](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
 
 model architecture : Convolutional Neural Network (CNN)
 
-for example CNN-architecture
+for example CNN-architecture : 
+
 ![](./images/cnn-architecture-1536x864.png)
 image source : https://www.theclickreader.com/building-a-convolutional-neural-network/
 
@@ -33,13 +34,16 @@ image source : https://www.theclickreader.com/building-a-convolutional-neural-ne
 - with RELU activation.
 - finally flatten then 2 output layers for binary classifications.
 
-1st conv2D 16 filters
+1st conv2D 16 filters :
+
 ![](./images/f1.png)
 
-1st conv2D 16 filters outputs
+1st conv2D 16 filters outputs :
+
 ![](./images/f1_o.png)
 
-2nd conv2D 32 filters outputs
+2nd conv2D 32 filters outputs :
+
 ![](./images/f2_o.png)
 
 some of the filters can detect the Ribs or Space between the Lung.
