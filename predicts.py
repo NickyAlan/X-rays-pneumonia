@@ -47,6 +47,6 @@ if __name__ == '__main__' :
     dataframe = pd.DataFrame({'filepath' : images_filepath, 'predictions': predictions, 'probability (%)' : probas} )
     time_ = date.today().strftime("%b-%d-%Y")
     dataframe.to_csv(f'./save_dataframe/X_rays_predictions_{time_}.csv', index=False)
-    print(f' -- save predictions to... save_dataframe/X_rays_predictions_{time_}.csv')
+    print(f'\n\n\n    -- save predictions to... save_dataframe/X_rays_predictions_{time_}.csv\n\n\n')
 
     
